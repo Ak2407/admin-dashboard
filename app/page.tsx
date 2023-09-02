@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div className="bg-primary flex">
       <Sidebar />
-      <div className="p-8 grid gap-4 grid-cols-1 xl:grid-cols-4 w-full overflow-hidden">
+      <div className="p-8 grid gap-4 grid-cols-1 xl:grid-cols-4 w-full">
         <div className="row-span-3">
           <TopDeals  />
         </div>

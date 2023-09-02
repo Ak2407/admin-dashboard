@@ -1,16 +1,21 @@
+"use client"
+
 import Image from "next/image";
-import React from "react";
+import React, {useState} from "react";
 import { menu } from "@/data";
 import Link from "next/link";
 import { FiAlignJustify, FiArrowLeft } from "react-icons/fi";
 
 const Sidebar = () => {
+
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <>
-      <div className="flex flex-col items-center gap-8 min-h-screen w-[60px] lg:w-[200px]  border-r-tertiary border-r-2 p-4">
-        {/* <button className="w-full flex lg:hidden justify-center items-center text-[30px] text-quaternary ">
-          <FiAlignJustify />
-        </button> */}
+      <div className="flex flex-col items-center gap-8 min-h-screen w-[4rem] lg:w-[10rem]  border-r-tertiary border-r-2 p-4">
+        <button className="w-full flex lg:hidden justify-center items-center text-[30px] text-quaternary " onClick={() => setIsOpen(!isOpen)} >
+          {isOpen ? <FiArrowLeft /> : <FiAlignJustify/>}
+        </button>
         {/* this is the logo section */}
         <div className="hidden lg:flex justify-center align-middle gap-2">
           <Image src="/logo.png" width={30} height={20} alt="logo" />
